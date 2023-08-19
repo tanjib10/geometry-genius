@@ -20,10 +20,115 @@
    </header>
    <main>
 
+      <section>
+         <div class="grid gap-6 grid-cols-1 lg:grid-cols-3">
+            <!-- Triangle card -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+               <figure class="px-10 pt-10">
+                  <img src="/images/triangle.png" class="rounded-xl" />
+               </figure>
+               <div class="card-body items-center text-center">
+                  <h2 class="card-title">Triangle</h2>
+                  <p>Area (A) = 0.5 X b X h</p>
+                  <p><input class="bg-slate-200 w-20 p-1" type="number" name="" id="base-field" placeholder="b"> m
+                     <input class="bg-slate-200 w-20 p-1" placeholder="h" type="number" name="" id="height-field"> m
+                  </p>
+                  <p class="text-lg">Area = <span id="area-field" class="text-xl">0</span>m <sup>2</sup></p>
+                  <button id="btn-triangle" onclick="triangleAreaCalculate()"
+                     class="btn w-full text-white text-xl p-2 hover:bg-orange-400 rounded-lg bg-fuchsia-600 mt-3">Calculate</button>
+               </div>
+            </div>
+
+            <!-- rectangle card  -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+               <figure class="px-10 pt-10">
+                  <img src="/images/rectangle.png" class="rounded-xl" />
+               </figure>
+               <div class="card-body items-center text-center">
+                  <h2 class="card-title">Rectangle</h2>
+                  <p>Area (A) = w X L</p>
+                  <p><input class="bg-slate-200 w-20 p-1" type="number" name="" id="width-field" placeholder="w"> m
+                     <input class="bg-slate-200 w-20 p-1" placeholder="l" type="number" name="" id="length-field"> m
+                  </p>
+                  <p class="text-lg">Area = <span id="rectangle-area-field" class="text-xl">0</span>m <sup>2</sup></p>
+                  <button onclick="rectangleAreaCalculate()"
+                     class="btn w-full text-white text-xl p-2 hover:bg-orange-400 rounded-lg bg-fuchsia-600 mt-3">Calculate</button>
+               </div>
+            </div>
+
+            <!-- parallelogram card  -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+               <figure class="px-10 pt-10">
+                  <img src="/images/parallelogram.png" class="rounded-xl" />
+               </figure>
+               <div class="card-body items-center text-center">
+                  <h2 class="card-title">Parallelogram</h2>
+                  <p>Area (A) = b X h</p>
+                  <p><input class="bg-slate-200 w-20 p-1" type="number" name="" id="parallel-base-field"
+                        placeholder="b"> m <input class="bg-slate-200 w-20 p-1" placeholder="h" type="number" name=""
+                        id="parallel-height-field"> m </p>
+                  <p class="text-lg">Area = <span id="parallel-area" class="text-xl">0</span>m <sup>2</sup></p>
+                  <button onclick="parallelAreaCalculate()"
+                     class="btn w-full text-white text-xl p-2 hover:bg-orange-400 rounded-lg bg-fuchsia-600 mt-3">Calculate</button>
+               </div>
+            </div>
+
+            <!-- rhombus card -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+               <figure class="px-10 pt-10">
+                  <img src="/images/rhombus.png" class="rounded-xl" />
+               </figure>
+               <div class="card-body items-center text-center">
+                  <h2 class="card-title">Rhombus</h2>
+                  <p>Area (A) = 0.5 X d1 X d2</p>
+                  <p><input class="bg-slate-200 w-20 p-1" type="number" name="" id="d1-field" placeholder="d1"> m <input
+                        class="bg-slate-200 w-20 p-1" placeholder="d2" type="number" name="" id="d2-field"> m </p>
+                  <p class="text-lg">Area = <span id="rhombus-area" class="text-xl">0</span>m <sup>2</sup></p>
+                  <button onclick="rhombusAreaCalculate()"
+                     class="btn w-full text-white text-xl p-2 hover:bg-orange-400 rounded-lg bg-fuchsia-600 mt-3">Calculate</button>
+               </div>
+            </div>
+
+            <!-- pentagon card -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+               <figure class="px-10 pt-10">
+                  <img src="/images/pentagon.png" class="rounded-xl" />
+               </figure>
+               <div class="card-body items-center text-center">
+                  <h2 class="card-title">Pentagon</h2>
+                  <p>Area (A) = 0.5 X p X b</p>
+                  <p><input class="bg-slate-200 w-20 p-1" type="number" name="" id="p-field" placeholder="p"> m <input
+                        class="bg-slate-200 w-20 p-1" placeholder="b" type="number" name="" id="b-field"> m </p>
+                  <p class="text-lg">Area = <span id="pentagon-area" class="text-xl">0</span>m <sup>2</sup></p>
+                  <button onclick="pentagonAreaCalculate()"
+                     class="btn w-full text-white text-xl p-2 hover:bg-orange-400 rounded-lg bg-fuchsia-600 mt-3">Calculate</button>
+               </div>
+            </div>
+
+            <!-- ellipse card -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+               <figure class="px-10 pt-10">
+                  <img src="/images/ellipse.png" class="rounded-xl" />
+               </figure>
+               <div class="card-body items-center text-center">
+                  <h2 class="card-title">Ellipse</h2>
+                  <p>Area (A) = ab</p>
+                  <p><input class="bg-slate-200 w-20 p-1" type="number" name="" id="ellipse-a-field" placeholder="a"> m
+                     <input class="bg-slate-200 w-20 p-1" placeholder="b" type="number" name="" id="ellipse-b-field"> m
+                  </p>
+                  <p class="text-lg">Area = <span id="ellipse-area" class="text-xl">0</span>m <sup>2</sup></p>
+                  <button onclick="ellipseAreaCalculate()"
+                     class="btn w-full text-white text-xl p-2 hover:bg-orange-400 rounded-lg bg-fuchsia-600 mt-3">Calculate</button>
+               </div>
+            </div>
+         </div>
+      </section>
    </main>
    <footer>
 
    </footer>
+   <script src="scripts/common.js"></script>
+   <script src="scripts/area.js"></script>
 </body>
 
 </html>
